@@ -31,6 +31,7 @@ The following extensions are installed:
 
 - [Excalidraw](#excalidraw)
 - [GitHub Copilot](#github-copilot)
+- [GitHub Copilot Chat](#github-copilot-chat)
 - [Markdown Full Text Search](#markdown-full-text-search)
 - [Markdown Preview Mermaid Support](#markdown-preview-mermaid-support)
 - [markdownlint](#markdownlint)
@@ -49,6 +50,12 @@ Excalidraw is a whiteboard tool that lets you easily sketch diagrams that have a
 [Marketplace](<https://marketplace.visualstudio.com/items?itemName=GitHub.copilot>)
 
 GitHub Copilot is an AI pair programmer that helps you write code faster and with less work.
+
+### GitHub Copilot Chat
+
+[Marketplace](<https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat>)
+
+Allows you to chat with GitHub Copilot.
 
 ### Markdown Full Text Search
 

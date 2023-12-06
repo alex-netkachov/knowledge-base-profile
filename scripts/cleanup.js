@@ -4,9 +4,7 @@ const extendedProfileFielPath = path.join(path.dirname(__dirname), 'Knowledge Ba
 const content = fs.readFileSync(extendedProfileFielPath, { encoding : 'utf8' });
 const profile = JSON.parse(content);
 
-remove('settings.settings', key => key.startsWith('git.'));
 remove('settings.settings', key => key === 'remote.SSH.remotePlatform');
-remove('settings.settings', key => key.startsWith('javascript.updateImportsOnFileMove'));
 delete profile.globalState;
 
 fs.writeFileSync(extendedProfileFielPath, JSON.stringify(profile, null, 2), { encoding : 'utf8' });
