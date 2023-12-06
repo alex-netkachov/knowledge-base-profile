@@ -9,6 +9,7 @@ The core concepts of this profile are:
 - the knowledge base is organised as articles in a folder hierarchy
 - each article is a Markdown file
 - articles are linked to each other using markdown links
+- articles are atomic, self-contained, and short
 
 The Visual Studio Code configuration concepts:
 
@@ -97,6 +98,29 @@ Enables viewing PDF files.
 
 The following settings are configured:
 
+- [Breadcrumbs](#breadcrumbs)
+- [Diff Editor: Ignore Trim Whitespace](#diff-editor-ignore-trim-whitespace)
+- [Editor: Font Ligatures](#editor-font-ligatures)
+- [Editor: Inline Suggest](#editor-inline-suggest)
+- [Editor: Glyph Margin](#editor-glyph-margin)
+- [Editor: Minimap](#editor-minimap)
+- [Editor: Render Whitespace](#editor-render-whitespace)
+- [Editor: Tab Size](#editor-tab-size)
+- [Explorer Decorations: Badges](#explorer-decorations-badges)
+- [Explorer Decorations: Colors](#explorer-decorations-colors)
+- [Files: Auto Save](#files-auto-save)
+- [GitHub Copilot: Enable](#github-copilot-enable)
+- [Markdown: Update Links On File Move](#markdown-update-links-on-file-move)
+- [Markdown: Validate](#markdown-validate)
+- [Window: Command Center](#window-command-center)
+- [Window: Title Bar Style](#window-title-bar-style)
+- [Workbench: Editor: Empty Hint](#workbench-editor-empty-hint)
+- [Workbench: Editor: Untitled: Label Format](#workbench-editor-untitled-label-format)
+- [Workbench: Color Theme](#workbench-color-theme)
+- [Workbench: Startup Editor](#workbench-startup-editor)
+
+JSON summary of the settings:
+
 ```json
 {
   "breadcrumbs.enabled": false,
@@ -106,23 +130,186 @@ The following settings are configured:
   "editor.glyphMargin": false,
   "editor.minimap.enabled": false,
   "editor.renderWhitespace": "none",
-  "editor.tabSize": 2,
+  "editor.tabSize": 4,
   "explorer.decorations.badges": false,
   "explorer.decorations.colors": false,
   "files.autoSave": "afterDelay",
   "github.copilot.enable": {
-    "*": true,
-    "plaintext": false,
-    "markdown": true,
-    "scminput": false
+    "*": true
   },
-  "markdown.updateLinksOnFileMove.enabled": "prompt",
+  "markdown.updateLinksOnFileMove.enabled": "always",
   "markdown.validate.enabled": true,
-  "security.workspace.trust.untrustedFiles": "open",
   "window.commandCenter": true,
+  "window.titleBarStyle": "custom",
   "workbench.editor.empty.hint": "hidden",
-  "workbench.editor.untitled.hint": "hidden",
+  "workbench.editor.untitled.labelFormat": "content",
   "workbench.colorTheme": "Default Light Modern",
   "workbench.startupEditor": "none"
 }
 ```
+
+### Breadcrumbs
+
+```json
+{ "breadcrumbs.enabled": false }
+```
+
+Breadcrumbs are disabled to reduce visual clutter. Hierarchy of the article is visible in the Explorer and the Outline panels.
+
+### Diff Editor: Ignore Trim Whitespace
+
+```json
+{ "diffEditor.ignoreTrimWhitespace": true }
+```
+
+Whitespace changes are ignored in the Diff Editor, which simplifies comparing articles.
+
+This change does not affect version control diffs, e.g. git's diff.
+
+### Editor: Font Ligatures
+
+```json
+{ "editor.fontLigatures": true }
+```
+
+Font ligatures (combining multiple characters into one) are enabled to improve readability.
+
+### Editor: Inline Suggest
+
+```json
+{ "editor.inlineSuggest.enabled": true }
+```
+
+Show inline suggestions automatically.
+
+### Editor: Glyph Margin
+
+```json
+{ "editor.glyphMargin": false }
+```
+
+Glyph margin is disabled to reduce visual clutter.
+
+### Editor: Minimap
+
+```json
+{ "editor.minimap.enabled": false }
+```
+
+Minimap is disabled. It is expected that the most of the articles are short enough to fit in one screen.
+
+### Editor: Render Whitespace
+
+```json
+{ "editor.renderWhitespace": "none" }
+```
+
+Whitespace is not rendered to reduce visual clutter.
+
+### Editor: Tab Size
+
+```json
+{ "editor.tabSize": 4 }
+```
+
+Standard indentation for Markdown files is 4 spaces. See: <https://spec.commonmark.org/current/>.
+
+### Explorer Decorations: Badges
+
+```json
+{ "explorer.decorations.badges": false }
+```
+
+Badges are disabled to reduce visual clutter.
+
+### Explorer Decorations: Colors
+
+```json
+{ "explorer.decorations.colors": false }
+```
+
+Coloring the decirations are disabled to reduce visual clutter.
+
+### Files: Auto Save
+
+```json
+{ "files.autoSave": "afterDelay" }
+```
+
+Files are saved automatically after a second from the last change.
+
+### GitHub Copilot: Enable
+
+```json
+{
+  "github.copilot.enable": {
+    "*": true
+  }
+}
+```
+
+Enable GitHub Copilot for all types of input.
+
+### Markdown: Update Links On File Move
+
+```json
+{ "markdown.updateLinksOnFileMove.enabled": "always" }
+```
+
+Links are updated automatically when files are moved.
+
+### Markdown: Validate
+
+```json
+{ "markdown.validate.enabled": true }
+```
+
+Markdown files are validated and errors are reported.
+
+### Window: Command Center
+
+```json
+{ "window.commandCenter": true }
+```
+
+Shows command Launcher together with window title.
+
+### Window: Title Bar Style
+
+```json
+{ "window.titleBarStyle": "custom" }
+```
+
+Title bar is customised, enables showing the command Launcher.
+
+### Workbench: Editor: Empty Hint
+
+```json
+{ "workbench.editor.empty.hint": "hidden" }
+```
+
+Hides the empty editor text.
+
+### Workbench: Editor: Untitled: Label Format
+
+```json
+{ "workbench.editor.untitled.labelFormat": "content" }
+```
+
+Names the untitled editor tabs by the content of the editor.
+
+### Workbench: Color Theme
+
+```json
+{ "workbench.colorTheme": "Default Light Modern" }
+```
+
+The default light theme. This is higly subjective, but our research shows that light themes are better for working with information (e.g. reading and writing) in contrast to dark themes that are better for working with code (e.g. debugging).
+
+### Workbench: Startup Editor
+
+```json
+{ "workbench.startupEditor": "none" }
+```
+
+Restore the last opened editors on startup.

@@ -18,16 +18,14 @@
           "files.autoSave": "afterDelay",
           "git.autofetch": true,
           "github.copilot.enable": {
-            "*": true,
-            "plaintext": false,
-            "markdown": true,
-            "scminput": false
+            "*": true
           },
-          "markdown.updateLinksOnFileMove.enabled": "prompt",
+          "markdown.updateLinksOnFileMove.enabled": "always",
           "markdown.validate.enabled": true,
-          "security.workspace.trust.untrustedFiles": "open",
           "window.commandCenter": true,
+          "window.titleBarStyle": "custom",
           "workbench.editor.empty.hint": "hidden",
+          "workbench.editor.untitled.labelFormat": "content",
           "workbench.colorTheme": "Default Light Modern",
           "workbench.startupEditor": "none"
         }
