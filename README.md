@@ -29,14 +29,62 @@ Once imported, profile does not update automatically. You either re-import the p
 
 The following extensions are installed:
 
-- Excalidraw
-- GitHub Copilot
-- Markdown Full Text Search
-- Markdown Preview Mermaid Support
-- markdownlint
-- Rainbow CSV
-- Live Preview
-- vscode-pdf
+- [Excalidraw](#excalidraw)
+- [GitHub Copilot](#github-copilot)
+- [Markdown Full Text Search](#markdown-full-text-search)
+- [Markdown Preview Mermaid Support](#markdown-preview-mermaid-support)
+- [markdownlint](#markdownlint)
+- [Rainbow CSV](#rainbow-csv)
+- [Live Preview](#live-preview)
+- [vscode-pdf](#vscode-pdf)
+
+### Excalidraw
+
+[Marketplace](<https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor>)
+
+Excalidraw is a whiteboard tool that lets you easily sketch diagrams that have a hand-drawn feel to them.
+
+### GitHub Copilot
+
+[Marketplace](<https://marketplace.visualstudio.com/items?itemName=GitHub.copilot>)
+
+GitHub Copilot is an AI pair programmer that helps you write code faster and with less work.
+
+### Markdown Full Text Search
+
+[Marketplace](<https://marketplace.visualstudio.com/items?itemName=AlexandriteSoftware.markdown-search>)
+
+Allows you to search for text in Markdown files.
+
+### Markdown Preview Mermaid Support
+
+[Marketplace](<https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid>)
+
+Adds Mermaid diagram and flowchart support to VS Code's builtin markdown preview.
+
+### markdownlint
+
+[Marketplace](<https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint>)
+
+Markdown linting and style checking.
+
+### Rainbow CSV
+
+[Marketplace](<https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv>)
+
+Highlight columns in CSV and TSV files.
+
+### Live Preview
+
+[Marketplace](<https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server>)
+
+Launch a development local Server with live reload feature for static & dynamic pages.
+
+### vscode-pdf
+
+[Marketplace](<https://marketplace.visualstudio.com/items?itemName=tomoki1207.pdf>)
+
+Enables viewing PDF files.
 
 ## Settings
 
