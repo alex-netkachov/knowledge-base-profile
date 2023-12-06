@@ -1,7 +1,10 @@
-const fs = require('fs');
-const content = fs.readFileSync('../Knowledge Base.json', { encoding : 'utf8' });
+const fs = require('fs'),
+      path = require('path');
+const extendedProfileFielPath = path.join(path.dirname(__dirname), 'Knowledge Base.json');
+const profileFielPath = path.join(path.dirname(__dirname), 'Knowledge Base.code-profile');
+const content = fs.readFileSync(extendedProfileFielPath, { encoding : 'utf8' });
 const profile = collapse(JSON.parse(content));
-fs.writeFileSync('../Knowledge Base.code-profile', JSON.stringify(profile, null, 2), { encoding : 'utf8' });
+fs.writeFileSync(profileFielPath, JSON.stringify(profile, null, 2), { encoding : 'utf8' });
 
 function collapse(value) {
   if (value === null || value === undefined) return value;
