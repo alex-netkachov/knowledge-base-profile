@@ -4,6 +4,10 @@ const extendedProfileFielPath = path.join(path.dirname(__dirname), 'Knowledge Ba
 const profileFielPath = path.join(path.dirname(__dirname), 'Knowledge Base.code-profile');
 const content = fs.readFileSync(extendedProfileFielPath, { encoding : 'utf8' });
 const profile = collapse(JSON.parse(content));
+
+// reformat settings becuase they are available for review at the Profile creation dialog
+profile.settings = JSON.stringify(JSON.parse(content), null, 2);
+
 fs.writeFileSync(profileFielPath, JSON.stringify(profile, null, 2), { encoding : 'utf8' });
 
 function collapse(value) {
