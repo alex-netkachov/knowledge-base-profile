@@ -28,6 +28,14 @@ The Visual Studio Code configuration concepts:
 
 Once imported, profile does not update automatically. You either re-import the profile or update the settings manually.
 
+## Concepts
+
+The approach encouraged by this profile is to manage knowledge as an integral part of the development process. Maintaining a knowledge base in close proximity to the code simplifies context switching, makes the knowledge more accessible, and significantly boosts productivity, though it does require maintenance of the knowledge base.
+
+This profile is designed to make knowledge management as straightforward as integrating Markdown files or Excalidraw diagrams with other project files and interlinking them.
+
+The settings specified in this profile can be transferred to the user settings file or the workspace settings file. This enables the same experience as defined by the profile, without the need to create a new profile.
+
 ## Extensions
 
 The following extensions are installed:
