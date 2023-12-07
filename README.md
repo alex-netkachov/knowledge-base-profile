@@ -110,6 +110,7 @@ The following settings are configured:
 - [Explorer Decorations: Colors](#explorer-decorations-colors)
 - [Files: Auto Save](#files-auto-save)
 - [GitHub Copilot: Enable](#github-copilot-enable)
+- [Markdown: Preview: Breaks](#markdown-preview-breaks)
 - [Markdown: Update Links On File Move](#markdown-update-links-on-file-move)
 - [Markdown: Validate](#markdown-validate)
 - [Window: Command Center](#window-command-center)
@@ -135,8 +136,12 @@ JSON summary of the settings:
   "explorer.decorations.colors": false,
   "files.autoSave": "afterDelay",
   "github.copilot.enable": {
-    "*": true
+    "*": true,
+    "plaintext": true,
+    "markdown": true,
+    "scminput": true
   },
+  "markdown.preview.breaks": true,
   "markdown.updateLinksOnFileMove.enabled": "always",
   "markdown.validate.enabled": true,
   "window.commandCenter": true,
@@ -243,12 +248,23 @@ Files are saved automatically after a second from the last change.
 ```json
 {
   "github.copilot.enable": {
-    "*": true
+    "*": true,
+    "plaintext": true,
+    "markdown": true,
+    "scminput": true
   }
 }
 ```
 
-Enable GitHub Copilot for all types of input.
+Enable GitHub Copilot for all types of input, including plain text, Markdown, and Source Control Management input.
+
+### Markdown: Preview: Breaks
+
+```json
+{ "markdown.preview.breaks": true }
+```
+
+Line breaks are rendered as `<br>` tags. This is to achive compatibility with Obsidian and other Markdown editors.
 
 ### Markdown: Update Links On File Move
 

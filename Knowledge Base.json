@@ -12,13 +12,17 @@
           "editor.glyphMargin": false,
           "editor.minimap.enabled": false,
           "editor.renderWhitespace": "none",
-          "editor.tabSize": 2,
+          "editor.tabSize": 4,
           "explorer.decorations.badges": false,
           "explorer.decorations.colors": false,
           "files.autoSave": "afterDelay",
           "github.copilot.enable": {
-            "*": true
+            "*": true,
+            "plaintext": true,
+            "markdown": true,
+            "scminput": true
           },
+          "markdown.preview.breaks": true,
           "markdown.updateLinksOnFileMove.enabled": "always",
           "markdown.validate.enabled": true,
           "window.commandCenter": true,
