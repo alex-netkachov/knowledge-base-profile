@@ -125,6 +125,7 @@ The following settings are configured:
 - [Workbench: Color Theme](#workbench-color-theme)
 - [Workbench: Startup Editor](#workbench-startup-editor)
 - [Language settings for Markdown: Editor: Word Based Suggestions](#language-settings-for-markdown-editor-word-based-suggestions)
+- [Extension settings for markdownlint](#extension-settings-for-markdownlint)
 
 JSON summary of the settings:
 
@@ -159,12 +160,25 @@ JSON summary of the settings:
   "workbench.editor.empty.hint": "hidden",
   "workbench.editor.untitled.labelFormat": "content",
   "workbench.colorTheme": "Default Light Modern",
+  "workbench.colorCustomizations": {
+    "[Default Light Modern]": {
+      "textCodeBlock.background": "#f0f0f0"
+    }
+  },
   "workbench.startupEditor": "none",
   "[markdown]": {
     "editor.wordBasedSuggestions": false
+  },
+  "markdownlint.config": {
+    "default": true,
+    "MD041" : false,
+    "MD013" : false,
+    "MD007" : { "indent" : 4 }
   }
 }
 ```
+
+These settings can be applied without creating new profile, by copying them into the `settings.json` file in the Visual Studio Code's user settings folder or to the workspace settings file.
 
 ### Breadcrumbs
 
@@ -355,10 +369,19 @@ Names the untitled editor tabs by the content of the editor.
 ### Workbench: Color Theme
 
 ```json
-{ "workbench.colorTheme": "Default Light Modern" }
+{
+  "workbench.colorTheme": "Default Light Modern",
+  "workbench.colorCustomizations": {
+    "[Default Light Modern]": {
+      "textCodeBlock.background": "#f0f0f0"
+    }
+  }
+}
 ```
 
 The default light theme. This is higly subjective, but our research shows that light themes are better for working with information (e.g. reading and writing) in contrast to dark themes that are better for working with code (e.g. debugging).
+
+The `textCodeBlock.background` is set to `#f0f0f0` to improve readability of code blocks.
 
 ### Workbench: Startup Editor
 
@@ -378,3 +401,22 @@ Restore the last opened editors on startup.
 ```
 
 Completing the current word in the document does not make much sense for free-form text like Markdown.
+
+### Extension settings for markdownlint
+
+```json
+{ "markdownlint.config": {
+    "default": true,
+    "MD041" : false,
+    "MD013" : false,
+    "MD007" : { "indent" : 4 }
+  }
+}
+```
+
+The following rules are configured:
+
+- `"default": true` - Enable default set of rules
+- `"MD041" : false` - First line in file is not a top level header
+- `"MD013" : false` - Do not check for line length
+- `"MD007" : { "indent" : 4 }` - Unordered list indentation is 4 spaces (consistent with Markdown editor tab size)
