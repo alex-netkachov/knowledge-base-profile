@@ -17,6 +17,8 @@ The Visual Studio Code configuration concepts:
 - UI is configured to be minimalistic and distraction-free
 - extensions for visualising and searching the knowledge base are installed
 
+![screenshot](docs/images/screenshot.png)
+
 ## Installation
 
 1. Download the profile to a file, e.g. `Knowledge Base.code-profile`
