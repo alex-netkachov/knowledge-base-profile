@@ -104,12 +104,15 @@ The following settings are configured:
 - [Editor: Inline Suggest](#editor-inline-suggest)
 - [Editor: Glyph Margin](#editor-glyph-margin)
 - [Editor: Minimap](#editor-minimap)
+- [Editor: Paste As](#editor-paste-as)
 - [Editor: Render Whitespace](#editor-render-whitespace)
 - [Editor: Tab Size](#editor-tab-size)
 - [Explorer Decorations: Badges](#explorer-decorations-badges)
 - [Explorer Decorations: Colors](#explorer-decorations-colors)
 - [Files: Auto Save](#files-auto-save)
 - [GitHub Copilot: Enable](#github-copilot-enable)
+- [Markdown: Editor: File Paste](#markdown-editor-file-paste)
+- [Markdown: Preferred Md Path Extension Style](#markdown-preferred-md-path-extension-style)
 - [Markdown: Preview: Breaks](#markdown-preview-breaks)
 - [Markdown: Update Links On File Move](#markdown-update-links-on-file-move)
 - [Markdown: Validate](#markdown-validate)
@@ -119,6 +122,7 @@ The following settings are configured:
 - [Workbench: Editor: Untitled: Label Format](#workbench-editor-untitled-label-format)
 - [Workbench: Color Theme](#workbench-color-theme)
 - [Workbench: Startup Editor](#workbench-startup-editor)
+- [Language settings for Markdown: Editor: Word Based Suggestions](#language-settings-for-markdown-editor-word-based-suggestions)
 
 JSON summary of the settings:
 
@@ -130,6 +134,7 @@ JSON summary of the settings:
   "editor.inlineSuggest.enabled": true,
   "editor.glyphMargin": false,
   "editor.minimap.enabled": false,
+  "editor.pasteAs.enabled": true,
   "editor.renderWhitespace": "none",
   "editor.tabSize": 4,
   "explorer.decorations.badges": false,
@@ -141,15 +146,21 @@ JSON summary of the settings:
     "markdown": true,
     "scminput": true
   },
+  "markdown.editor.filePaste.enabled": true,
+  "markdown.preferredMdPathExtensionStyle": "removeExtension",
   "markdown.preview.breaks": true,
   "markdown.updateLinksOnFileMove.enabled": "always",
+  "markdown.updateLinksOnFileMove.include": [ "**/*.*" ],
   "markdown.validate.enabled": true,
   "window.commandCenter": true,
   "window.titleBarStyle": "custom",
   "workbench.editor.empty.hint": "hidden",
   "workbench.editor.untitled.labelFormat": "content",
   "workbench.colorTheme": "Default Light Modern",
-  "workbench.startupEditor": "none"
+  "workbench.startupEditor": "none",
+  "[markdown]": {
+    "editor.wordBasedSuggestions": false
+  }
 }
 ```
 
@@ -202,6 +213,14 @@ Glyph margin is disabled to reduce visual clutter.
 ```
 
 Minimap is disabled. It is expected that the most of the articles are short enough to fit in one screen.
+
+### Editor: Paste As
+
+```json
+{ "editor.pasteAs.enabled": true }
+```
+
+Paste as Markdown is enabled to simplify adding links and images to the articles.
 
 ### Editor: Render Whitespace
 
@@ -258,6 +277,22 @@ Files are saved automatically after a second from the last change.
 
 Enable GitHub Copilot for all types of input, including plain text, Markdown, and Source Control Management input.
 
+### Markdown: Editor: File Paste
+
+```json
+{ "markdown.editor.filePaste.enabled": true }
+```
+
+Pasting files provides option to create Markdown links and images.
+
+### Markdown: Preferred Md Path Extension Style
+
+```json
+{ "markdown.preferredMdPathExtensionStyle": "removeExtension" }
+```
+
+The `.md`` extension for links to Markdown documents is removed to simplify the links.
+
 ### Markdown: Preview: Breaks
 
 ```json
@@ -269,7 +304,8 @@ Line breaks are rendered as `<br>` tags. This is to achive compatibility with Ob
 ### Markdown: Update Links On File Move
 
 ```json
-{ "markdown.updateLinksOnFileMove.enabled": "always" }
+{ "markdown.updateLinksOnFileMove.enabled": "always",
+  "markdown.updateLinksOnFileMove.include": [ "**/*.*" ] }
 ```
 
 Links are updated automatically when files are moved.
@@ -329,3 +365,14 @@ The default light theme. This is higly subjective, but our research shows that l
 ```
 
 Restore the last opened editors on startup.
+
+### Language settings for Markdown: Editor: Word Based Suggestions
+
+```json
+{ "[markdown]": {
+    "editor.wordBasedSuggestions": false
+  }
+}
+```
+
+Completing the current word in the document does not make much sense for free-form text like Markdown.

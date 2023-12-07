@@ -11,6 +11,7 @@
           "editor.inlineSuggest.enabled": true,
           "editor.glyphMargin": false,
           "editor.minimap.enabled": false,
+          "editor.pasteAs.enabled": true,
           "editor.renderWhitespace": "none",
           "editor.tabSize": 4,
           "explorer.decorations.badges": false,
@@ -22,15 +23,21 @@
             "markdown": true,
             "scminput": true
           },
+          "markdown.editor.filePaste.enabled": true,
+          "markdown.preferredMdPathExtensionStyle": "removeExtension",
           "markdown.preview.breaks": true,
           "markdown.updateLinksOnFileMove.enabled": "always",
+          "markdown.updateLinksOnFileMove.include": [ "**/*.*" ],
           "markdown.validate.enabled": true,
           "window.commandCenter": true,
           "window.titleBarStyle": "custom",
           "workbench.editor.empty.hint": "hidden",
           "workbench.editor.untitled.labelFormat": "content",
           "workbench.colorTheme": "Default Light Modern",
-          "workbench.startupEditor": "none"
+          "workbench.startupEditor": "none",
+          "[markdown]": {
+            "editor.wordBasedSuggestions": false
+          }
         }
       }
     }
