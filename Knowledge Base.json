@@ -16,7 +16,6 @@
           "explorer.decorations.badges": false,
           "explorer.decorations.colors": false,
           "files.autoSave": "afterDelay",
-          "git.autofetch": true,
           "github.copilot.enable": {
             "*": true
           },

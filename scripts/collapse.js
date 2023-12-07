@@ -5,8 +5,10 @@ const profileFielPath = path.join(path.dirname(__dirname), 'Knowledge Base.code-
 const content = fs.readFileSync(extendedProfileFielPath, { encoding : 'utf8' });
 const profile = collapse(JSON.parse(content));
 
-// reformat settings becuase they are available for review at the Profile creation dialog
-profile.settings = JSON.stringify(JSON.parse(content), null, 2);
+// reformat settings because they are available for review at the Profile creation dialog
+const obj = JSON.parse(profile.settings);
+obj.settings = JSON.stringify(JSON.parse(obj.settings), null, 2);
+profile.settings = JSON.stringify(obj);
 
 fs.writeFileSync(profileFielPath, JSON.stringify(profile, null, 2), { encoding : 'utf8' });
 
