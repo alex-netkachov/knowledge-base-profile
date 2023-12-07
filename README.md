@@ -179,9 +179,10 @@ JSON summary of the settings:
   },
   "markdownlint.config": {
     "default": true,
-    "MD041" : false,
+    "MD007" : { "indent" : 4 },
     "MD013" : false,
-    "MD007" : { "indent" : 4 }
+    "MD033" : false,
+    "MD041" : false
   }
 }
 ```
@@ -413,11 +414,13 @@ Completing the current word in the document does not make much sense for free-fo
 ### Extension settings for markdownlint
 
 ```json
-{ "markdownlint.config": {
+{
+  "markdownlint.config": {
     "default": true,
-    "MD041" : false,
+    "MD007" : { "indent" : 4 },
     "MD013" : false,
-    "MD007" : { "indent" : 4 }
+    "MD033" : false,
+    "MD041" : false
   }
 }
 ```
@@ -425,6 +428,7 @@ Completing the current word in the document does not make much sense for free-fo
 The following rules are configured:
 
 - `"default": true` - Enable default set of rules
-- `"MD041" : false` - First line in file is not a top level header
-- `"MD013" : false` - Do not check for line length
 - `"MD007" : { "indent" : 4 }` - Unordered list indentation is 4 spaces (consistent with Markdown editor tab size)
+- `"MD013" : false` - Do not check for line length
+- `"MD033" : false` - Inline HTML is allowed
+- `"MD041" : false` - First line in file is not a top level header

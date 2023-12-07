@@ -45,9 +45,10 @@
           },
           "markdownlint.config": {
             "default": true,
-            "MD041" : false,
+            "MD007" : { "indent" : 4 },
             "MD013" : false,
-            "MD007" : { "indent" : 4 }
+            "MD033" : false,
+            "MD041" : false
           }
         }
       }
