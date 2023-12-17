@@ -43,6 +43,7 @@ The following extensions are installed:
 - [Excalidraw](#excalidraw)
 - [GitHub Copilot](#github-copilot)
 - [GitHub Copilot Chat](#github-copilot-chat)
+- [Markdown Checkboxes](#markdown-checkboxes)
 - [Markdown Full Text Search](#markdown-full-text-search)
 - [Markdown Preview Mermaid Support](#markdown-preview-mermaid-support)
 - [markdownlint](#markdownlint)
@@ -67,6 +68,12 @@ GitHub Copilot is an AI pair programmer that helps you write code faster and wit
 [Marketplace](<https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat>)
 
 Allows you to chat with GitHub Copilot.
+
+### Markdown Checkboxes
+
+[Marketplace](<https://marketplace.visualstudio.com/items?itemName=bierner.markdown-checkbox>)
+
+Adds support for checkboxes in Markdown preview.
 
 ### Markdown Full Text Search
 
