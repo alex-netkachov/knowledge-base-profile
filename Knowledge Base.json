@@ -27,7 +27,9 @@
           "markdown.preferredMdPathExtensionStyle": "removeExtension",
           "markdown.preview.breaks": true,
           "markdown.updateLinksOnFileMove.enabled": "always",
-          "markdown.updateLinksOnFileMove.include": [ "**/*.*" ],
+          "markdown.updateLinksOnFileMove.include": [
+            "**/*.*"
+          ],
           "markdown.validate.enabled": true,
           "window.commandCenter": true,
           "window.titleBarStyle": "custom",
@@ -41,14 +43,16 @@
           },
           "workbench.startupEditor": "none",
           "[markdown]": {
-            "editor.wordBasedSuggestions": false
+            "editor.wordBasedSuggestions": "off"
           },
           "markdownlint.config": {
             "default": true,
-            "MD007" : { "indent" : 4 },
-            "MD013" : false,
-            "MD033" : false,
-            "MD041" : false
+            "MD007": {
+              "indent": 4
+            },
+            "MD013": false,
+            "MD033": false,
+            "MD041": false
           }
         }
       }
@@ -62,6 +66,13 @@
           "uuid": "c0717640-9dd1-4b2b-abe6-de6652115cd6"
         },
         "displayName": "Markdown Full Text Search"
+      },
+      {
+        "identifier": {
+          "id": "bierner.markdown-checkbox",
+          "uuid": "b0db4123-c5d9-4f45-bd2e-70738ebbb304"
+        },
+        "displayName": "Markdown Checkboxes"
       },
       {
         "identifier": {
