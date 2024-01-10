@@ -130,13 +130,6 @@
           "uuid": "4386e6f6-ec10-4463-9d23-c24278718947"
         },
         "displayName": "vscode-pdf"
-      },
-      {
-        "identifier": {
-          "id": "visualstudioexptteam.vscodeintellicode",
-          "uuid": "876e8f93-74d0-4f4f-91b7-34a09f19f444"
-        },
-        "displayName": "IntelliCode"
       }
     ]
   }
